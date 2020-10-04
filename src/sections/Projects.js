@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, Text, Flex, Box } from 'rebass/styled-components';
+import { Image, Text, Flex, Box, Link } from 'rebass/styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
@@ -114,7 +114,7 @@ const Project = ({
 }) => (
   <Card p={0}>
     <Flex style={{ height: CARD_HEIGHT }}>
-      <TextContainer>
+      <TextContainer onClick={() => window.open(repositoryUrl)}>
         <span>
           <Title my={2} pb={1} color="text">
             {name}
@@ -125,7 +125,7 @@ const Project = ({
         </Text>
       </TextContainer>
 
-      <ImageContainer>
+      <ImageContainer onClick={() => window.open(repositoryUrl)}>
         <ProjectImage src={logo.image.src} alt={logo.title} />
         <ProjectTag>
           <Flex
