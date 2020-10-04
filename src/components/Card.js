@@ -28,6 +28,7 @@ export const Card = styled(CardRebass).attrs({
   border-radius: 8px;
 
   &:hover {
+    cursor: pointer;
     top: -10px;
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
