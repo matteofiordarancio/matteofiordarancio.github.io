@@ -14,7 +14,7 @@ import Hide from '../components/Hide';
 const Background = () => (
   <div>
     <Triangle
-      color="secondaryLight"
+      color="backgroundDark"
       height={['80vh', '80vh']}
       width={['100vw', '100vw']}
       invertX
@@ -36,7 +36,7 @@ const Background = () => (
     />
 
     <Triangle
-      color="backgroundDark"
+      color="secondary"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
       invertY
@@ -140,13 +140,6 @@ const Project = ({
                 url={repositoryUrl}
               />
             </Box>
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="See project"
-                fontAwesomeIcon="globe"
-                url={projectUrl}
-              />
-            </Box>
           </Flex>
           <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
             {type}
@@ -177,7 +170,7 @@ Project.propTypes = {
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+    <Section.Header name="Projects" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
