@@ -53,7 +53,7 @@ const Header = () => (
           const homeLink = home && (
             <Image
               src={Logo}
-              width="50px"
+              width="40px"
               alt="Back Home. Icon provided by FontAwesome: https://fontawesome.com/license"
               onClick={home.onClick}
               style={{

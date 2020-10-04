@@ -5,7 +5,7 @@ module.exports = {
   text: '#12130F',
 
   primary: '#32E0C4',
-  primaryLight: '#32E0C4',
+  primaryLight: '#12130F',
   primaryDark: '#32E0C4',
 
   secondary: '#12130F',
