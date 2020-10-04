@@ -30,7 +30,7 @@ const TextFooter = styled(Text)`
     transition: color ease 0.5s;
 
     &:hover {
-      color: ${(props) => props.theme.colors.primaryLight};
+      color: ${(props) => props.theme.colors.primaryDark};
     }
   }
 `;
@@ -55,11 +55,11 @@ const Footer = () => (
       const { name, socialLinks } = data.contentfulAbout;
 
       return (
-        <Box p={[2, 3]} backgroundColor="primaryDark" id="footer">
+        <Box p={[50, 50]} backgroundColor="secondary" id="footer">
           <FooterContainer>
             <Fade left>
               <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} Portfolio - Powered by `}</span>
+                <span>{`${name}'s portfolio - Powered by `}</span>
                 <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
                 <span>, </span>
                 <Link href="https://www.contentful.com/" mr={1}>
