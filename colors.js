@@ -1,5 +1,5 @@
 module.exports = {
-  background: '#EEEEEE',
+  background: '#EBEBEB',
   backgroundDark: '#D6DAD2',
 
   text: '#12130F',
