@@ -54,7 +54,7 @@ const Header = () => (
             <Image
               src={Logo}
               width="50px"
-              alt="Portfolio Logo"
+              alt="Back Home. Icon provided by FontAwesome: https://fontawesome.com/license"
               onClick={home.onClick}
               style={{
                 cursor: 'pointer',

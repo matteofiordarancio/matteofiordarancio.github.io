@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { Heading, Flex, Box, Text } from 'rebass/styled-components';
+import { Heading, Flex, Box, Text, Image } from 'rebass/styled-components';
 import TextLoop from 'react-text-loop';
 import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
+import Developer from '../components/Logo/me.svg';
+
+
 
 const Background = () => (
   <div>
@@ -69,36 +72,39 @@ const LandingPage = () => (
 
         return (
           <Fragment>
+            <Image
+              src={Developer}
+              width={['30vw', '30vw']}
+              display="inline-block"
+              alt="Me coding"
+              display="inline-block"
+              marginLeft={20}
+            />
             <Heading
-              textAlign="center"
+              textAlign="right"
               as="h1"
               color="primary"
-              fontSize={[6, 7]}
-              mb={[3, 4, 5]}
+              fontSize={[5, 6]}
+              marginBottom={1}
+              marginTop="-25vw"
+              marginRight={25}
             >
-              {`Hello, I'm ${name}!`}
+              {`Hi there! I'm ${name}!`}
             </Heading>
 
             <Heading
+              textAlign="right"
               as="h2"
-              color="primary"
-              fontSize={[5, 6]}
-              mb={[3, 5]}
-              textAlign="center"
-              style={centerHorizontally}
+              color="secondary"
+              fontSize={[4, 5]}
+              marginBottom={4}
+              marginRight={25}
             >
-              <TextLoop interval={5000}>
-                {roles
-                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
-                  .map((text) => (
-                    <Text width={[300, 500]} key={text}>
-                      {text}
-                    </Text>
-                  ))}
-              </TextLoop>
+              {`An enthusiastic Software Engineer from Italy`}
             </Heading>
 
-            <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
+
+            <Flex alignItems="center" justifyContent="flex-end" flexWrap="wrap" marginRight={25}>
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>
                   <SocialLink {...rest} />
